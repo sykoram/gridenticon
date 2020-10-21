@@ -2,10 +2,12 @@ package main
 
 import (
 	"crypto/sha256"
+	"flag"
 	"fmt"
 	svgo "github.com/ajstarks/svgo/float"
 	"io"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -14,48 +16,123 @@ type grid [][]byte
 const tileSize float64 = 10
 const gridSize int = 8
 
-var svgOut io.Writer = os.Stdout
+// flags
+var help bool
+var str string
+var defsFile string
+var outFile string
+
 var hasher = sha256.New()
+var out *os.File
+
+func init() {
+	flag.BoolVar(&help, "h", false, "")
+	flag.StringVar(&outFile, "out", "./out.svg", "Output file")
+	flag.StringVar(&defsFile, "defs", "./default.defs", "Defs file")
+}
 
 func main() {
-	reader := strings.NewReader("XXX")
+	flag.Parse()
+	handleHelp()
+	setup()
+	h := getHash(str)
+	g := bytesToGrid(h)
+	gridToSvg(g)
+	out.Close()
+	exit()
+}
+
+/*
+Handles help flag -h. If the help is requested, prints program description and usage, and exits.
+*/
+func handleHelp() {
+	if help {
+		fmt.Println(`A SVG identicon generator!
+This program generates an identicon for given string. For more advanced usage, see https://github.com/sykoram/identicon
+Usage: ./identicon STRING
+Additional flags:`)
+		flag.PrintDefaults()
+		os.Exit(0)
+	}
+}
+
+/*
+Checks and processes flags.
+ */
+func setup() {
+	str = flag.Arg(0)
+
+	var err error
+	out, err = createFile(outFile)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+}
+
+/*
+Creates and returns a file. Parent directories are created if required. File has to be closed manually!
+*/
+func createFile(path string) (f *os.File, err error) {
+	err = os.MkdirAll(filepath.Dir(path), 666)
+	if err != nil {
+		return
+	}
+	f, err = os.Create(path)
+	return
+}
+
+/*
+Generates and returns hash of the given string.
+os.Exit(1) on error
+ */
+func getHash(s string) []byte {
+	reader := strings.NewReader(s)
 	_, err := io.Copy(hasher, reader)
 	if err != nil {
 		fmt.Println(err)
-		return
+		os.Exit(1)
 	}
 
-	h := hasher.Sum(nil)
-	h2 := make([]byte, gridSize*gridSize)
-	for i, b := range h {
-		h2[2*i] = (b & 0b11110000) >> 4
-		h2[2*i+1] = b & 0b00001111
+	return hasher.Sum(nil)
+}
+
+/*
+Takes []byte data, splits every byte into two parts, generates and returns a grid.
+ */
+func bytesToGrid(bytes []byte) [][]byte {
+	// split bytes
+	halfbytes := make([]byte, gridSize*gridSize)
+	for i, b := range bytes {
+		halfbytes[2*i] = (b & 0b11110000) >> 4
+		halfbytes[2*i+1] = b & 0b00001111
 	}
 
+	// generate grid
 	g := make(grid, gridSize)
 	for i := 0; i < gridSize; i++ {
 		g[i] = make([]byte, gridSize)
 		for j := 0; j < gridSize; j++ {
-			g[i][j] = h2[i*gridSize+j]
+			g[i][j] = halfbytes[i*gridSize+j]
 		}
 	}
 
-	gridToSvg(g)
+	return g
 }
 
 /*
-
+Generates SVG identicon from the given grid.
  */
 func gridToSvg(g grid) {
 	if isGridEmpty(g) {
-		fmt.Println("grid is empty")
-		return
+		fmt.Println("the grid is empty")
+		os.Exit(1)
 	}
 
 	// create svg document
 	w := float64(len(g))*tileSize
 	h := float64(len(g[0]))*tileSize
-	svg := svgo.New(svgOut)
+	svg := svgo.New(out)
 	svg.Start(w, h)
 
 	addDefs(svg)
@@ -66,8 +143,6 @@ func gridToSvg(g grid) {
 			svg.Use(float64(x)*tileSize, float64(y)*tileSize, fmt.Sprintf("#%x", g[y][x]))
 		}
 	}
-
-	//svg.Grid(0, 0, w, h, tileSize, "stroke:black;opacity:0.1") //XXX
 
 	svg.End()
 }
@@ -80,12 +155,24 @@ func isGridEmpty(g grid) bool {
 }
 
 /*
-Creates a definition block, and adds definitions using the defFun map.
+Creates a definition block and copies defs from an external file.
  */
 func addDefs(svg *svgo.SVG) {
 	svg.Def()
-	for i, f := range defFun {
-		f(svg, i)
+	defsReader, _ := os.Open(defsFile)
+	_, err := io.Copy(svg.Writer, defsReader)
+	if err != nil {
+		fmt.Println(err)
+		fmt.Printf("error reading file %s\n", defsFile)
+		os.Exit(1)
 	}
 	svg.DefEnd()
+}
+
+/*
+Prints information about performed actions.
+ */
+func exit() {
+	fmt.Printf("Generated an identicon for string \"%s\": %s\n", str, outFile)
+	fmt.Println("See -h for help")
 }
