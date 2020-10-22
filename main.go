@@ -16,6 +16,7 @@ type grid [][]byte
 const tileSize float64 = 10
 const gridSize int = 8
 const border float64 = 5
+const bgColor string = "white"
 
 // flags
 var help bool
@@ -38,7 +39,7 @@ func main() {
 	setup()
 	h := getHash(str)
 	g := bytesToGrid(h)
-	gridToSvg(g)
+	generateIdenticon(g)
 	out.Close()
 	exit()
 }
@@ -124,7 +125,7 @@ func bytesToGrid(bytes []byte) [][]byte {
 /*
 Generates SVG identicon from the given grid.
  */
-func gridToSvg(g grid) {
+func generateIdenticon(g grid) {
 	if isGridEmpty(g) {
 		fmt.Println("the grid is empty")
 		os.Exit(1)
@@ -137,6 +138,9 @@ func gridToSvg(g grid) {
 	svg.Start(w, h)
 
 	addDefs(svg)
+
+	// background
+	svg.Rect(0, 0, w, h, "stroke:none;fill:"+bgColor)
 
 	// tile grid
 	for i := range g {
