@@ -15,6 +15,7 @@ type grid [][]byte
 
 const tileSize float64 = 10
 const gridSize int = 8
+const border float64 = 5
 
 // flags
 var help bool
@@ -130,17 +131,19 @@ func gridToSvg(g grid) {
 	}
 
 	// create svg document
-	w := float64(len(g))*tileSize
-	h := float64(len(g[0]))*tileSize
+	w := float64(len(g))*tileSize + 2*border
+	h := float64(len(g[0]))*tileSize + 2*border
 	svg := svgo.New(out)
 	svg.Start(w, h)
 
 	addDefs(svg)
 
 	// tile grid
-	for y := range g {
-		for x := range g[y] {
-			svg.Use(float64(x)*tileSize, float64(y)*tileSize, fmt.Sprintf("#%x", g[y][x]))
+	for i := range g {
+		for j := range g[i] {
+			x := float64(j)*tileSize + border
+			y := float64(i)*tileSize + border
+			svg.Use(x, y, fmt.Sprintf("#%x", g[i][j]))
 		}
 	}
 
