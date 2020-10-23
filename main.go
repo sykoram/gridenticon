@@ -28,9 +28,10 @@ var hasher = sha256.New()
 var out *os.File
 
 func init() {
-	flag.BoolVar(&help, "h", false, "")
-	flag.StringVar(&outFile, "out", "./out.svg", "Output file")
-	flag.StringVar(&defsFile, "defs", "./default.defs", "Defs file")
+	flag.BoolVar(&help, "h", false, "Display help")
+	flag.StringVar(&str, "s", "", "String")
+	flag.StringVar(&outFile, "o", "./out.svg", "Output file")
+	flag.StringVar(&defsFile, "defs", "./defs/default.defs", "Defs file")
 }
 
 func main() {
@@ -51,7 +52,7 @@ func handleHelp() {
 	if help {
 		fmt.Println(`A SVG identicon generator!
 This program generates an identicon for given string. For more advanced usage, see https://github.com/sykoram/identicon
-Usage: ./identicon STRING
+Usage: ./identicon -s STRING
 Additional flags:`)
 		flag.PrintDefaults()
 		os.Exit(0)
@@ -62,8 +63,6 @@ Additional flags:`)
 Checks and processes flags.
  */
 func setup() {
-	str = flag.Arg(0)
-
 	var err error
 	out, err = createFile(outFile)
 	if err != nil {
@@ -181,5 +180,5 @@ Prints information about performed actions.
  */
 func exit() {
 	fmt.Printf("Generated an identicon for string \"%s\": %s\n", str, outFile)
-	fmt.Println("See -h for help")
+	fmt.Println("-s STRING to specify the string; -h for help")
 }
