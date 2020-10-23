@@ -30,7 +30,7 @@ var out *os.File
 func init() {
 	flag.BoolVar(&help, "h", false, "Display help")
 	flag.StringVar(&str, "s", "", "String")
-	flag.StringVar(&outFile, "o", "./out.svg", "Output file")
+	flag.StringVar(&outFile, "out", "./out.svg", "Output file")
 	flag.StringVar(&defsFile, "defs", "./defs/default.defs", "Defs file")
 }
 
