@@ -6,6 +6,8 @@ A SVG identicon generator.
 
 - [Setup](#setup)
 - [Usage](#usage)
+  - [Designs](#designs)
+  - [Custom Design](#custom-design) 
 
 
 ## Setup
@@ -37,15 +39,18 @@ Use flag `-h` to display the help.
 
 The most basic command would be:
 ```sh
-identicon STRING
+identicon -s STRING
 ```
 This generates a SVG file (the identicon) using hash of the string.
 
+Additional flags:
 - `-out OUT_FILE`: Specifies the output file (default: out.svg).
-- `-defs DEFS_FILE`: Specifies the defs file containing [design](#custom-design) (default: default.defs)
+- `-defs DEFS_FILE`: Specifies the defs file containing [design](#designs) (default: `defs/default.defs`) or [custom design](#custom-design)
 
 
 ### Designs
+
+Designs are in the `defs` directory.
 
 `default.defs` | `dots.defs` 
 ---------------|-------------
