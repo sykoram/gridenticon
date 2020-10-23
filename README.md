@@ -44,6 +44,18 @@ This generates a SVG file (the identicon) using hash of the string.
 - `-out OUT_FILE`: Specifies the output file (default: out.svg).
 - `-defs DEFS_FILE`: Specifies the defs file containing [design](#custom-design) (default: default.defs)
 
+
+### Designs
+
+`default.defs` | `dots.defs` 
+---------------|-------------
+<img src="./resources/default.svg" width="200" height="200"> | <img src="./resources/dots.svg" width="200" height="200">
+
+`trees.defs` | `waves.defs`
+-------------|-------------
+<img src="./resources/trees.svg" width="200" height="200"> | <img src="./resources/waves.svg" width="200" height="200">
+
+
 ### Custom Design
 
 The identicon is a 8x8 grid. Each tile is chosen based on a part of hash (generated for the string). There are some default tile designs, but you can specify yours.

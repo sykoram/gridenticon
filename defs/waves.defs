@@ -1,0 +1,83 @@
+<g id="0">
+    <line x1="0.00" y1="5.00" x2="10.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="1">
+    <line x1="0.00" y1="5.00" x2="5.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="2">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <line x1="5.00" y1="5.00" x2="10.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="3">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="4">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="5">
+    <line x1="0.00" y1="5.00" x2="5.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="6">
+    <line x1="5.00" y1="5.00" x2="10.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 0 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="7">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 0 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="8">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 0 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="9">
+    <path d="M0.00,5.00 A6.25,6.25 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="a">
+    <path d="M0.00,5.00 A6.25,6.25 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="b">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 2.50,2.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <line x1="2.50" y1="2.50" x2="7.50" y2="2.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M7.50,2.50 A2.50,2.50 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="c">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 0 2.50,7.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <line x1="2.50" y1="7.50" x2="7.50" y2="7.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M7.50,7.50 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="d">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 0 2.50,2.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <line x1="2.50" y1="2.50" x2="7.50" y2="2.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M7.50,2.50 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="e">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 2.50,7.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <line x1="2.50" y1="7.50" x2="7.50" y2="7.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <path d="M7.50,7.50 A2.50,2.50 0.00 0 1 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="f">
+    <path d="M0.00,5.00 A2.50,2.50 0.00 0 1 2.50,2.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M2.50,2.50 A2.50,2.50 0.00 0 0 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A2.50,2.50 0.00 0 1 7.50,7.50" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M7.50,7.50 A2.50,2.50 0.00 0 0 10.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
