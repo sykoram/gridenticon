@@ -1,6 +1,6 @@
-# identicon
+# gridenticon
 
-A SVG identicon generator.
+A SVG-grid-identicon generator.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ A SVG identicon generator.
 
 [Go](https://golang.org/) and [Git](https://git-scm.com/) have to be installed.
 
-Clone or download this repo somewhere into `$GOPATH`, preferably into `$GOPATH/src/github.com/sykoram/identicon`.
+Clone or download this repo somewhere into `$GOPATH`, preferably into `$GOPATH/src/github.com/sykoram/gridenticon`.
 
 Download and install all dependencies:
 ```sh
@@ -29,7 +29,7 @@ go install
 This creates an executable inside `$GOBIN` (usually `$GOPATH/bin`), and program should work now. You can try to run:
 
 ```sh
-identicon -h
+gridenticon -h
 ```
 
 
@@ -39,7 +39,7 @@ Use flag `-h` to display the help.
 
 The most basic command would be:
 ```sh
-identicon -s STRING
+gridenticon -s STRING
 ```
 This generates a SVG file (the identicon) using hash of the string.
 

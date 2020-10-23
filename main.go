@@ -50,9 +50,9 @@ Handles help flag -h. If the help is requested, prints program description and u
 */
 func handleHelp() {
 	if help {
-		fmt.Println(`A SVG identicon generator!
-This program generates an identicon for given string. For more advanced usage, see https://github.com/sykoram/identicon
-Usage: ./identicon -s STRING
+		fmt.Println(`gridenticon - a SVG-grid-identicon generator!
+This program generates an identicon for given string. For more advanced usage, see https://github.com/sykoram/gridenticon
+Usage: gridenticon -s STRING
 Additional flags:`)
 		flag.PrintDefaults()
 		os.Exit(0)
