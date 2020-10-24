@@ -1,0 +1,85 @@
+<g id="0">
+    <line x1="0.00" y1="0.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="1">
+    <path d="M0.00,0.00 A10.00,10.00 0.00 0 0 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="2">
+    <path d="M0.00,0.00 A10.00,10.00 0.00 0 1 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="3">
+    <path d="M0.00,0.00 A20.00,20.00 0.00 0 0 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="4">
+    <path d="M0.00,0.00 A20.00,20.00 0.00 0 1 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="5">
+    <line x1="0.00" y1="0.00" x2="2.50" y2="7.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="2.50" y1="7.50" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="6">
+    <line x1="0.00" y1="0.00" x2="7.50" y2="2.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="7.50" y1="2.50" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="7">
+    <line x1="0.00" y1="0.00" x2="1.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="1.00" y1="5.00" x2="5.00" y2="9.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="5.00" y1="9.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="8">
+    <line x1="0.00" y1="0.00" x2="5.00" y2="1.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="5.00" y1="1.00" x2="9.00" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="9.00" y1="5.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="9">
+    <line x1="0.00" y1="0.00" x2="2.50" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="2.50" y1="5.00" x2="7.50" y2="5.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="7.50" y1="5.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="a">
+    <line x1="0.00" y1="0.00" x2="5.00" y2="2.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="5.00" y1="2.50" x2="5.00" y2="7.50" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="5.00" y1="7.50" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="b">
+    <line x1="0.00" y1="0.00" x2="3.00" y2="7.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="3.00" y1="7.00" x2="7.00" y2="3.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="7.00" y1="3.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="c">
+    <line x1="0.00" y1="0.00" x2="7.00" y2="3.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="7.00" y1="3.00" x2="3.00" y2="7.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="3.00" y1="7.00" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+
+<g id="d">
+    <path d="M0.00,0.00 A5.00,5.00 0.00 0 0 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A5.00,5.00 0.00 0 1 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="e">
+    <path d="M0.00,0.00 A5.00,5.00 0.00 0 1 5.00,5.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+    <path d="M5.00,5.00 A5.00,5.00 0.00 0 0 10.00,10.00" style="stroke:black;stroke-width:1;fill:none;stroke-linecap:round" />
+</g>
+
+<g id="f">
+    <line x1="0.00" y1="0.00" x2="3.33" y2="0.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="3.33" y1="0.00" x2="3.33" y2="3.33" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="3.33" y1="3.33" x2="6.66" y2="3.33" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="6.66" y1="3.33" x2="6.66" y2="6.66" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="6.66" y1="6.66" x2="10.00" y2="6.66" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+    <line x1="10.00" y1="6.66" x2="10.00" y2="10.00" style="stroke:black;stroke-width:1;stroke-linecap:round" />
+</g>
+

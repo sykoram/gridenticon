@@ -60,6 +60,10 @@ Designs are in the `defs` directory.
 -------------|-------------
 <img src="./resources/trees.svg" width="200" height="200"> | <img src="./resources/waves.svg" width="200" height="200">
 
+`lightning.defs` |
+-----------------|
+<img src="./resources/lightning.svg" width="200" height="200"> |
+
 
 ### Custom Design
 
