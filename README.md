@@ -4,10 +4,25 @@ A SVG-grid-identicon generator.
 
 ## Table of Contents
 
+- [Designs](#designs)
 - [Setup](#setup)
 - [Usage](#usage)
-  - [Designs](#designs)
   - [Custom Design](#custom-design) 
+
+
+## Designs
+
+| `default` | `trees` |
+|-----------|---------|
+| <img src="./resources/default.svg" width="250"> | <img src="./resources/trees.svg" width="250"> | <img src="./resources/waves.svg" width="250"> |
+
+| `dots` | `waves` |
+|---------|---------|
+| <img src="./resources/dots.svg" width="250"> | <img src="./resources/waves.svg" width="250"> |
+
+| `lightning` |
+|--------|
+| <img src="./resources/lightning.svg" width="250"> |
 
 
 ## Setup
@@ -43,33 +58,18 @@ gridenticon -s STRING
 ```
 This generates a SVG file (the identicon) using hash of the string.
 
+**Warning:** The hash can be read from the generated identicon, so it is recommended not to enter any sensitive information.
+
 Additional flags:
 - `-out OUT_FILE`: Specifies the output file (default: out.svg).
 - `-defs DEFS_FILE`: Specifies the defs file containing [design](#designs) (default: `defs/default.defs`) or [custom design](#custom-design)
 
 
-### Designs
-
-Designs are in the `defs` directory.
-
-`default.defs` | `dots.defs` 
----------------|-------------
-<img src="./resources/default.svg" width="200" height="200"> | <img src="./resources/dots.svg" width="200" height="200">
-
-`trees.defs` | `waves.defs`
--------------|-------------
-<img src="./resources/trees.svg" width="200" height="200"> | <img src="./resources/waves.svg" width="200" height="200">
-
-`lightning.defs` |
------------------|
-<img src="./resources/lightning.svg" width="200" height="200"> |
-
-
 ### Custom Design
 
-The identicon is a 8x8 grid. Each tile is chosen based on a part of hash (generated for the string). There are some default tile designs, but you can specify yours.
+Tiles are organized into a 8x8 grid. Each tile is chosen based on a part of hash (generated for the string). There are some default tile designs, but you can specify yours.
 
-To do that you need to have a "defs file". It may look like this:
+To do that you need to have a "defs" file. It may look like this:
 ```
 <g id="0"></g>
 <g id="1"></g>
@@ -89,5 +89,5 @@ To do that you need to have a "defs file". It may look like this:
 <g id="f"><circle cx="5.00" cy="5.00" r="4.00" /></g>
 ```
 
-It has to contain all the ids from `0` to `f` (hex). You can put your objects into the groups to create custom tile designs.
+It has to contain all the ids from `0` to `f` (hex). You can put your objects into the groups to create custom tile designs. Dimensions of a tile are 10x10 by default.
 
