@@ -17,12 +17,12 @@ A SVG-grid-identicon generator.
 | <img src="./resources/default.svg" width="250"> | <img src="./resources/trees.svg" width="250"> | <img src="./resources/waves.svg" width="250"> |
 
 | `dots` | `waves` |
-|---------|---------|
+|--------|---------|
 | <img src="./resources/dots.svg" width="250"> | <img src="./resources/waves.svg" width="250"> |
 
-| `lightning` |
-|--------|
-| <img src="./resources/lightning.svg" width="250"> |
+| `lightning` | `stitching` |
+|-------------|----------|
+| <img src="./resources/lightning.svg" width="250"> | <img src="./resources/stitching.svg" width="250"> |
 
 
 ## Setup
